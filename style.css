@@ -1,0 +1,361 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+font-size: 100%;
+font: baseline;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+/* ----------------------------
+base
+---------------------------- */
+html,
+body
+{
+	color: #777;
+	background: #fff;
+  font-family: 'Kaushan Script', cursive;
+}
+body
+{
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.3;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	margin: 0;
+	color: #424242;
+	line-height: 1.1;
+}
+img
+{
+	max-width: 100%;
+	height: auto;
+	border: 0;
+  display:block;
+  margin:auto;
+}
+a:focus img { background: #000; }
+a:hover img { background: #3bb2d0; }
+a:active img { background: #af0000; }
+blockquote { margin: 0; }
+/* ----------------------------
+wide
+---------------------------- */
+@media (min-width: 38em)
+{
+	body
+	{
+		font-size: 1.125em;
+		/* 18px/16px */
+	}
+}
+/* ----------------------------
+layout
+---------------------------- */
+/* row */
+.row
+{
+	clear: both;
+	overflow: hidden;
+}
+/* row-colors */
+.row--white { background: #fff; }
+.row--grey { background: #f8f8f8; }
+.row--blue { background: #3bb2d0; }
+.row--dark-grey
+{
+	color: #fff;
+	background: #282e37;
+}
+/* row-padding */
+.row--padding-medium
+{
+	padding-top: 2.1875em;
+	padding-bottom: 2.1875em;
+	/* 35px/16px */
+}
+.row--padding-wide
+{
+	padding-top: 2.1875em;
+	padding-bottom: 2.1875em;
+	/* 35px/16px */
+}
+/* row-padding dl warren */
+.row--padding-narrow
+{
+	padding-top: .25em;
+	padding-bottom: .25em;
+	/* 8px/16px */
+}
+
+/* containers */
+.container-narrow,
+.container-medium,
+.container-wide
+{
+	margin: 0 auto;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+.container-narrow { max-width: 34em; }
+.container-medium { max-width: 52em; }
+.container-wide { max-width: 58em; }
+/* columns */
+.col-narrow,
+.col-narrow--right { margin-bottom: 1.5em; }
+/* ----------------------------
+wide
+---------------------------- */
+@media (min-width: 38em)
+{
+	.row--padding-medium
+	{
+		padding-top: 3.8889em;
+        padding-bottom: 3.8889em;
+		/* 70px/18px */
+	}
+		.row--padding-wide
+	{
+		padding-top: 5.5556em;
+		padding-bottom: 5.5556em;
+		/* 100px/18px */
+	}
+		.container-narrow,
+	.container-medium,
+	.container-wide
+	{
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+		.col-narrow,
+	.col-medium,
+	.col-wide { float: left; }
+	.col-narrow--right,
+	.col-wide--right { float: right; }
+		.col-wide,
+	.col-wide--right { width: 61%; }
+		.col-medium { width: 50%; }
+		.col-narrow,
+	.col-narrow--right
+	{
+		width: 25%;
+		margin-bottom: 0;
+	}
+}
+/* ----------------------------
+banner
+---------------------------- */
+.row--banner
+{
+	background-color: #626e6d;
+	background-image: url('img/img4.jpg') ;
+    background-repeat: no-repeat;
+	background-position: center;
+	background-size: 30%;
+}
+@media (min-width: 38em)
+{
+	.row--banner { background-image: url(img/img4.jpg); }
+}
+/* ----------------------------
+header
+---------------------------- */
+.header
+{
+	padding: 1.25em 1em;
+	/* 20px/16px - 16px/16px */
+}
+.header__logo
+{
+	float: left;
+	padding-top: .2em;
+}
+.header__nav
+{
+	float: right;
+	width: 150px;
+}
+.header__nav ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: right;
+}
+.header__nav li
+{
+	display: inline-block;
+	margin: 0;
+}
+.header__nav a
+{
+	display: block;
+	margin-right: .2em;
+	padding: 0.6em 1em 0.4em;
+	border-radius: .3em;
+	color: #fff;
+	background: none;
+	font-size: 0.8125em;
+	/* 13px/16px */
+	font-weight: bold;
+	text-decoration: none;
+}
+.header__nav-contact a { margin-right: 0; }
+.current a
+{
+	color: #fff;
+	background: #56b880;
+}
+.header__nav a:focus { background: #000; }
+.header__nav a:hover { background: #3bb2d0; }
+.header__nav a:active { background: #af0000; }
+@media (min-width: 38em)
+{
+	.header
+	{
+		padding: 2.2222em 2em;
+		/* 40px/18px - 36px/18px */
+	}
+		.header__nav { width: 12em; }
+	.header__nav a
+	{
+		font-size: 0.8333em;
+		/* 15px/18px */
+	}
+}
+/* ----------------------------
+banner-content
+---------------------------- */
+.banner-content
+{
+	padding: 1.875em 1.5em 2.8125em;
+	/* 30px/16px - 24px/16px - 45px/16px */
+    text-align: center;
+}
+.banner-content__heading
+{
+	margin: 0 0 1.875em;
+	/* 20px/16px */
+	font-size: 1.5em;
+	/* 24px/16px */
+	font-weight: bold;
+  color: white;
+    text-shadow: 4px 4px 2px #1c313c;
+}
+@media (min-width: 38em)
+{
+	.banner-content
+	{
+		padding: 7.5em 2em;
+		/* 135px/18px - 36px/18px */
+	}
+	.banner-content__heading
+	{
+		font-size: 2.5556em;
+		/* 46px/18px */
+	}
+}
+/* ----------------------------
+features
+---------------------------- */
+.features { text-align: center; }
+.features__row
+{
+	margin-bottom: 2.1875em;
+	/* 35px/16px */
+}
+.features__heading
+{
+	margin: 0 0 .75em;
+	/* 12px/16px */
+	font-size: 1.125em;
+	/* 18px/16px */
+}
+.features__text {
+  margin: 0;
+  text-align: left;
+}
+@media (min-width: 38em)
+{
+	.features { text-align: left; }
+	.features__row
+	{
+		margin-bottom: 4.1667em;
+		/* 75px/18px */
+	}
+		.features__row:last-child { margin: 0; }
+	.features__padding
+	{
+		padding-top: 4em;
+		/* 72px/18px */
+	}
+		.features__heading
+	{
+		font-size: 1.5556em;
+		/* 75px/18px */
+		font-weight: normal;
+	}
+}
+/* ----------------------------
+footer
+---------------------------- */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
